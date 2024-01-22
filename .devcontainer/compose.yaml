@@ -1,0 +1,22 @@
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/go:1-1.21-bullseye
+    container_name: entfw
+    working_dir: /github.com/a10adotapp/entfw
+    command: sleep infinity
+    volumes:
+      - ..:/github.com/a10adotapp/entfw:cached
+    ports:
+      - 3000:3000
+
+  db:
+    image: mysql:8
+    container_name: entfw-db
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_TCP_PORT: 3306
+      MYSQL_USER: "a10adotapp"
+      MYSQL_PASSWORD: "password"
+      MYSQL_DATABASE: "entfw"
+    ports:
+      - 3306:3306

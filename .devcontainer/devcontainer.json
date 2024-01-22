@@ -1,0 +1,20 @@
+{
+  "name": "entfw",
+  "dockerComposeFile": "compose.yaml",
+  "service": "app",
+  "workspaceFolder": "/github.com/a10adotapp/entfw",
+  "initializeCommand": "ls",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go"
+      ],
+      "settings": {
+        "remote.autoForwardPorts": false,
+        "gopls": {
+          "experimentalWorkspaceModule": true
+        }
+      }
+    }
+  }
+}
