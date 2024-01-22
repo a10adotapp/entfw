@@ -98,3 +98,11 @@ type User struct {
 	selectValues sql.SelectValues
 }
 ```
+
+## License
+
+MIT
+
+## Author
+
+a10a (Arakaki Kazma)
